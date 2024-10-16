@@ -15,7 +15,6 @@
         justify-content: center;
         background: #000000;
     }
-
     .hearth {
         height: 150px;
         width: 150px;
@@ -26,23 +25,19 @@
         animation: palpitar 0.5s linear infinite alternate;
         cursor: pointer; /* Para mostrar que es clickable */
     }
-
     .contenido {
         position: fixed;
         margin-bottom: 50px;
         text-align: center;
     }
-
     h1, h2 {
         color: white;
     }
-
     @keyframes palpitar {
         0%{transform: rotate(45deg) scale(1.10);}
         80%{transform: rotate(45deg) scale(1.0);}
         100%{transform: rotate(45deg) scale(0.8);}
     }
-
     .hearth::before {
         content: "";
         position: absolute;
@@ -53,7 +48,6 @@
         border-radius: 50%;
         box-shadow: 20px 20px 150px #f204a3;
     }
-
     .hearth::after {
         content: "";
         position: absolute;
@@ -71,10 +65,8 @@
         <h1> ¡Feliz 1er mes mi negrita preciosa! </h1>
         <h2 id="mensaje"> </h2>
     </div>
-
     <script>
-        const mensajes = [
-           
+        const mensajes = [        
         "gracias por este primer mes tan hermoso",
         "sé que hemos tenido muchos altibajos",
         "pero tenemos las ganas de mejorar por nosotros",
@@ -104,21 +96,16 @@
         "soy y seré siempre solo tuyo",
         "espero te haya gustado:(",
         "te amo con todo mi corazón mi negrita hermosa"
-
-        ];
-
+      ];
         // Variable para llevar el seguimiento del índice actual
         let indiceMensaje = 0;
-
         // Seleccionar el elemento del corazón y el mensaje
         const corazon = document.getElementById("corazon");
         const mensaje = document.getElementById("mensaje");
-
         // Agregar el evento de clic para cambiar el mensaje
         corazon.addEventListener("click", () => {
             // Mostrar el mensaje correspondiente al índice actual
-            mensaje.textContent = mensajes[indiceMensaje];
-            
+            mensaje.textContent = mensajes[indiceMensaje];            
             // Incrementar el índice y reiniciarlo si llega al final
             indiceMensaje = (indiceMensaje + 1) % mensajes.length;
         });
